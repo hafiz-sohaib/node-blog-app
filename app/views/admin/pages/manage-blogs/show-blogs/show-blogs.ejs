@@ -1,0 +1,38 @@
+<%- include('../../../components/header') %>
+
+<div class="container-fluid p-0">
+    <h4 class="mb-5 section-heading">Manage Blogs</h4>
+
+    <div>
+        <div class="row mb-4">
+            <div class="col-3">
+                <a href="/admin/manage-blogs/add-blog" class="btn primary-btn mb-5">Add New Blog</a>
+            </div>
+            <div class="col-6"></div>
+            <div class="col-3">
+                <input type="text" class="form-control" onkeyup="getBlogsData(this)" placeholder="Search..." />
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table text-center align-middle">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Image</th>
+                        <th>Title</th>
+                        <th>Category</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="blog_data" class="table-group-divider"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<%- include('../../../components/footer') %>
+<script src="/admin/pages/manage-blogs/show-blogs/show-blogs.js"></script>

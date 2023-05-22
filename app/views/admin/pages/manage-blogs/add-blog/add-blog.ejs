@@ -1,0 +1,57 @@
+<%- include('../../../components/header') %>
+
+<div class="container-fluid p-0">
+    <h4 class="mb-5 section-heading">Add New Blog</h4>
+
+    <form id="post_form">
+        <div class="row">
+            <div class="col-9">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <h6 class="card-title mb-4">Basic Info</h6>
+                        <div class="row mb-2">
+                            <div class="col-12 mb-3">
+                                <input type="text" name="post_title" class="form-control" placeholder="Post Title..." autocomplete="off" required />
+                            </div>
+                            <div class="col-12">
+                                <div id="editor"></div>
+                                <input type="hidden" name="post_description" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card shadow-sm mb-3">
+                    <div class="card-body">
+                        <h6 class="card-title mb-4">Media</h6>
+                        <div class="dropzone" id="post_image"></div>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm mb-3">
+                    <div class="card-body">
+                        <h6 class="card-title mb-4">Category</h6>
+                        <input type="text" name="post_category" class="form-control" placeholder="Post Category" autocomplete="off" required />
+                    </div>
+                </div>
+
+                <div class="card shadow-sm mb-3">
+                    <div class="card-body">
+                        <h6 class="card-title mb-4">Status</h6>
+                        <select name="post_status" class="form-select" required>
+                            <option value="Published">Published</option>
+                            <option value="Draft">Draft</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn primary-btn px-4">Publish</button>
+    </form>
+</div>
+
+<%- include('../../../components/footer') %>
+
+<script src="/admin/pages/manage-blogs/add-blog/add-blog.js"></script>

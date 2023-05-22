@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ~ Dynamic Title ~ -->
+    <title><%= title %></title>
+    <!-- ~ CSS Links ~ -->
+    <link rel="stylesheet" href="/site/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://cdn.quilljs.com/1.3.6/quill.snow.css" />
+    <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css" />
+    <link rel="stylesheet" href="/admin/css/style.css" />
+    <!-- ~ jQuery Links ~ -->
+    <script src="/site/js/jquery.min.js"></script>
+</head>
+<body>
+
+    <main class="main p-2 vh-100 d-flex" id="current_path" data-path="/admin<%= path %>">
+        <%- include('../components/sidebar'); %>
+        <section class="container my-2 content">

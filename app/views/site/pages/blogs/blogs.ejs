@@ -1,0 +1,59 @@
+<%- include('../../components/header') %>
+<%- include('../../components/navbar') %>
+
+<section class="blog-section" id="current_path" data-path="<%= path %>">
+    <div class="blog-hero">
+        <div class="container">
+            <div class="blog-hero-content text-center">
+                <h1>Blogs</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur neque non quaerat ratione consequuntur commodi dolore nemo libero laudantium praesentium. Dignissimos repellendus, nostrum repellat odio ipsa obcaecati dolores mollitia ratione?</p>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-lg-7 position-relative mx-auto px-0">
+                    <input type="search" onkeyup="getSearchBlog(this)" class="form-control" placeholder="Search Articals..." />
+                    <div id="search_result"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <input type="hidden" id="slug" value="<%= slug %>" />
+
+    <div class="blog-content">
+        <div class="container">
+            <div class="mb-5" id="single_blog_data"></div>
+            <div class="row sort-section mb-5">
+                <div class="col-4 ms-auto">
+                    <div class="row">
+                        <div class="col-7 p-0">
+                            <select class="form-select category-select" name="post_category" onchange="sortByCategory(this)"></select>
+                        </div>
+                        <div class="col-5 p-0">
+                            <select class="form-select sort-select" name="sortOrder" onchange="sortByNameDate(this)">
+                                <option selected disabled>Sort By</option>
+                                <option value="asc">A-Z</option>
+                                <option value="desc">Z-A</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="blog_data"></div>
+
+            <div class="row comment-area">
+                <div class="col-1">
+                    <img src="https://i0.wp.com/rightchoiceurgentcare.com/wp-content/uploads/2021/11/default-user.png" class="w-100 rounded" alt="">
+                </div>
+                <div class="col-11 text-area">
+                    <textarea rows="3" class="form-control" placeholder="Write your comment...."></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script src="/site/pages/blogs/blogs.js"></script>
+
+<%- include('../../components/footer') %>
